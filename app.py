@@ -1,12 +1,18 @@
 import os
 import streamlit as st
-from predict import predict_video
 
 st.set_page_config(
     page_title="Human Activity Recognition",
     page_icon="🎥",
     layout="centered"
 )
+
+import cv2
+
+st.write("OpenCV version:", cv2.__version__)
+st.stop()
+
+from predict import predict_video
 
 st.title("🎥 Human Activity Recognition")
 st.write("Upload a video to predict the human activity.")
